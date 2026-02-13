@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mi Cecy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="not-loaded">
+  <!-- background hearts (decorative) -->
+  <div id="bg-hearts" class="bg-hearts" aria-hidden="true"></div>
+  <main class="page">
+    <h1 class="title">Mi pequeña Cecy</h1>
+    <div class="flowers"></div>
+  </main>
+
+  <!-- Envelope -->
+  <div id="envelope-container">
+
+    <!-- heart particle burst (spawned by JS) -->
+    <div id="heart-burst" class="heart-burst" aria-hidden="true"></div>
+    <div
+      id="envelope-message"
+      class="envelope-message"
+      role="status"
+      aria-live="polite"
+    >
+      Open me 
+    </div>
+
+    <div
+      id="envelope"
+      class="envelope"
+      role="button"
+      tabindex="0"
+      aria-label="Open envelope"
+    >
+      <div class="flap"></div>
+      <div class="body">
+        <!-- letter inside the envelope; will animate up when opened -->
+        <div class="letter">
+          <div class="letter-inner"><span class="heart" aria-hidden="true">�</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="envelope-choices" class="envelope-choices" hidden>
+      <p class="prompt">please proceed to the next step</p>
+      <div class="choices">
+        <button id="env-yes" class="btn yes" type="button">Yes 💌</button>
+        <button id="env-no" class="btn no" type="button">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="main.js" defer></script>
+</body>
+</html>
